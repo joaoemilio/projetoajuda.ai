@@ -1,0 +1,8 @@
+map_S_breakfast_menu_S_breakfast_menu = function(){ 
+var outputbreakfast_menu={};
+
+outputbreakfast_menu =  {};
+return outputbreakfast_menu;
+};
+
+

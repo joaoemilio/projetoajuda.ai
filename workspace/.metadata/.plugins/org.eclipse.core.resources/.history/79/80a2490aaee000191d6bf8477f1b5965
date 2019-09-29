@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:datamapper="http:///org/wso2/developerstudio/eclipse/gmf/datamapper" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_nApeQOCtEemBjM6ZkrZYfQ" type="DataMapper" name="FoodMapping.datamapper_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_nHhiUOCtEemBjM6ZkrZYfQ" type="2002" fontName="Segoe UI">
+    <element xmi:type="datamapper:Input" href="FoodMapping.datamapper#//@input"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nHhiUeCtEemBjM6ZkrZYfQ" x="65" y="-20" width="250" height="160"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_nHhiUuCtEemBjM6ZkrZYfQ" type="2003" fontName="Segoe UI">
+    <element xmi:type="datamapper:Output" href="FoodMapping.datamapper#//@output"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nHhiU-CtEemBjM6ZkrZYfQ" x="400" y="-15" width="250" height="160"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_nApeQeCtEemBjM6ZkrZYfQ"/>
+  <element xmi:type="datamapper:DataMapperRoot" href="FoodMapping.datamapper#/"/>
+</notation:Diagram>

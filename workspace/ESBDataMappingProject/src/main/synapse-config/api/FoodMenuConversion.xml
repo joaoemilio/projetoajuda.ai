@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/convertMenu" name="FoodMenuConversion" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST GET">
+        <inSequence>
+            <datamapper config="gov:datamapper/FoodMapping.dmc" inputSchema="gov:datamapper/FoodMapping_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/FoodMapping_outputSchema.json" outputType="XML" xsltStyleSheet="gov:datamapper/FoodMapping_xsltStyleSheet.xml"/>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

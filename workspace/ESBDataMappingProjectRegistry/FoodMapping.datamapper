@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datamapper:DataMapperRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:datamapper="http:///org/wso2/developerstudio/eclipse/gmf/datamapper">
+  <input>
+    <treeNode name="rss" schemaDataType="OBJECT" level="1">
+      <node name="@version" schemaDataType="NUMBER" level="2">
+        <properties key="type" value="number"/>
+        <properties key="id" value="http://wso2jsonschema.org/version"/>
+        <properties key="nullable" value="false"/>
+        <outNode>
+          <outgoingLink/>
+        </outNode>
+        <inNode/>
+      </node>
+      <node name="channel" schemaDataType="OBJECT" level="2">
+        <node name="title" schemaDataType="STRING" level="3">
+          <properties key="type" value="string"/>
+          <properties key="id" value="http://wso2jsonschema.org/channel/title"/>
+          <properties key="nullable" value="false"/>
+          <outNode>
+            <outgoingLink/>
+          </outNode>
+          <inNode/>
+        </node>
+        <node name="link" schemaDataType="STRING" level="3">
+          <properties key="type" value="string"/>
+          <properties key="id" value="http://wso2jsonschema.org/channel/link"/>
+          <properties key="nullable" value="false"/>
+          <outNode>
+            <outgoingLink/>
+          </outNode>
+          <inNode/>
+        </node>
+        <node name="description" schemaDataType="STRING" level="3">
+          <properties key="type" value="string"/>
+          <properties key="id" value="http://wso2jsonschema.org/channel/description"/>
+          <properties key="nullable" value="false"/>
+          <outNode>
+            <outgoingLink/>
+          </outNode>
+          <inNode/>
+        </node>
+        <node name="image" schemaDataType="OBJECT" level="3">
+          <node name="title" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/channel/image/title"/>
+            <properties key="nullable" value="false"/>
+            <outNode>
+              <outgoingLink/>
+            </outNode>
+            <inNode/>
+          </node>
+          <node name="url" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/channel/image/url"/>
+            <properties key="nullable" value="false"/>
+            <outNode>
+              <outgoingLink/>
+            </outNode>
+            <inNode/>
+          </node>
+          <node name="link" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/channel/image/link"/>
+            <properties key="nullable" value="false"/>
+            <outNode>
+              <outgoingLink/>
+            </outNode>
+            <inNode/>
+          </node>
+          <properties key="type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/channel/image"/>
+          <properties key="nullable" value="false"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="item" level="3">
+          <node name="title" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/channel/item/0/title"/>
+            <properties key="nullable" value="false"/>
+            <outNode>
+              <outgoingLink/>
+              <outgoingLink inNode="//@output/@treeNode.0/@node.0/@inNode"/>
+            </outNode>
+            <inNode/>
+          </node>
+          <node name="link" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/channel/item/0/link"/>
+            <properties key="nullable" value="false"/>
+            <outNode>
+              <outgoingLink/>
+              <outgoingLink inNode="//@output/@treeNode.0/@node.1/@inNode"/>
+            </outNode>
+            <inNode/>
+          </node>
+          <node name="description" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/channel/item/0/description"/>
+            <properties key="nullable" value="false"/>
+            <outNode>
+              <outgoingLink/>
+            </outNode>
+            <inNode/>
+          </node>
+          <node name="pubDate" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/channel/item/0/pubDate"/>
+            <properties key="nullable" value="false"/>
+            <outNode>
+              <outgoingLink/>
+              <outgoingLink inNode="//@output/@treeNode.0/@node.2/@inNode"/>
+            </outNode>
+            <inNode/>
+          </node>
+          <node name="guid" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/channel/item/0/guid"/>
+            <properties key="nullable" value="false"/>
+            <outNode>
+              <outgoingLink/>
+              <outgoingLink inNode="//@output/@treeNode.0/@node.3/@inNode"/>
+            </outNode>
+            <inNode/>
+          </node>
+          <node name="dc:date" schemaDataType="STRING" level="4">
+            <properties key="namespaces" value="{prefix=dc, url=http://purl.org/dc/elements/1.1/}"/>
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/channel/item/0/dc:date"/>
+            <properties key="nullable" value="false"/>
+            <outNode>
+              <outgoingLink/>
+              <outgoingLink inNode="//@output/@treeNode.0/@node.4/@inNode"/>
+            </outNode>
+            <inNode/>
+          </node>
+          <properties key="type" value="array"/>
+          <properties key="id" value="http://wso2jsonschema.org/channel/item"/>
+          <properties key="items_id" value="http://wso2jsonschema.org/channel/item/0"/>
+          <properties key="items_type" value="object"/>
+          <properties key="nullable" value="false"/>
+          <properties key="properties_id" value="{title={id=http://wso2jsonschema.org/channel/image/title, type=string}, url={id=http://wso2jsonschema.org/channel/image/url, type=string}, link={id=http://wso2jsonschema.org/channel/image/link, type=string}}"/>
+          <properties key="properties_id" value="{title={id=http://wso2jsonschema.org/channel/item/0/title, type=string}, link={id=http://wso2jsonschema.org/channel/item/0/link, type=string}, description={id=http://wso2jsonschema.org/channel/item/0/description, type=string}, pubDate={id=http://wso2jsonschema.org/channel/item/0/pubDate, type=string}, guid={id=http://wso2jsonschema.org/channel/item/0/guid, type=string}, dc:date={id=http://wso2jsonschema.org/channel/item/0/dc:date, type=string}}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <properties key="type" value="object"/>
+        <properties key="id" value="http://wso2jsonschema.org/channel"/>
+        <properties key="nullable" value="false"/>
+        <properties key="properties_id" value="{title={id=http://wso2jsonschema.org/channel/title, type=string}, link={id=http://wso2jsonschema.org/channel/link, type=string}, description={id=http://wso2jsonschema.org/channel/description, type=string}, image={id=http://wso2jsonschema.org/channel/image, type=object, properties={title={id=http://wso2jsonschema.org/channel/image/title, type=string}, url={id=http://wso2jsonschema.org/channel/image/url, type=string}, link={id=http://wso2jsonschema.org/channel/image/link, type=string}}}, item={id=http://wso2jsonschema.org/channel/item, type=array, items=[{id=http://wso2jsonschema.org/channel/item/0, type=object, properties={title={id=http://wso2jsonschema.org/channel/item/0/title, type=string}, link={id=http://wso2jsonschema.org/channel/item/0/link, type=string}, description={id=http://wso2jsonschema.org/channel/item/0/description, type=string}, pubDate={id=http://wso2jsonschema.org/channel/item/0/pubDate, type=string}, guid={id=http://wso2jsonschema.org/channel/item/0/guid, type=string}, dc:date={id=http://wso2jsonschema.org/channel/item/0/dc:date, type=string}}}]}}"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <properties key="namespaces" value="{prefix=dc, url=http://purl.org/dc/elements/1.1/}"/>
+      <properties key="type" value="object"/>
+      <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+      <properties key="id" value="http://wso2jsonschema.org"/>
+      <properties key="nullable" value="false"/>
+      <properties key="attribute_id" value="{attribute_id=[http://wso2jsonschema.org/version]}"/>
+      <properties key="attribute_type" value="{attribute_type=[number]}"/>
+      <outNode/>
+      <inNode/>
+    </treeNode>
+  </input>
+  <output>
+    <treeNode name="root" level="1">
+      <node name="title" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/0/title"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@input/@treeNode.0/@node.1/@node.4/@node.0/@outNode/@outgoingLink.1"/>
+      </node>
+      <node name="link" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/0/link"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@input/@treeNode.0/@node.1/@node.4/@node.1/@outNode/@outgoingLink.1"/>
+      </node>
+      <node name="pubDate" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/0/pubDate"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@input/@treeNode.0/@node.1/@node.4/@node.3/@outNode/@outgoingLink.1"/>
+      </node>
+      <node name="guid" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/0/guid"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@input/@treeNode.0/@node.1/@node.4/@node.4/@outNode/@outgoingLink.1"/>
+      </node>
+      <node name="date" schemaDataType="STRING" level="2">
+        <properties key="type" value="string"/>
+        <properties key="id" value="http://wso2jsonschema.org/0/date"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@input/@treeNode.0/@node.1/@node.4/@node.5/@outNode/@outgoingLink.1"/>
+      </node>
+      <properties key="type" value="array"/>
+      <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+      <properties key="id" value="http://wso2jsonschema.org"/>
+      <properties key="items_id" value="http://wso2jsonschema.org/0"/>
+      <properties key="items_type" value="object"/>
+      <properties key="nullable" value="false"/>
+      <outNode/>
+      <inNode/>
+    </treeNode>
+  </output>
+</datamapper:DataMapperRoot>

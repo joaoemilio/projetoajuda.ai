@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server PASSWORD="T1tans" SERVER_URL="https://integrator.wso2training.com/" USERNAME="admin" hostname="wso2training" id="WSO2 Remote Server at wso2training" name="WSO2 Remote Server at wso2training" server-type="org.wso2.developerstudio.eclipse.carbon.server.remote" server-type-id="org.wso2.developerstudio.eclipse.carbon.server.remote" start-timeout="600" stop-timeout="15" timestamp="1">
+    <list key="RCS_MODULES_LIST" value0="org.wso2.developerstudio.eclipse.carbon.moduleFactory:ESBDataMappingProjectCompositeApplication"/>
+    <list key="modules" value0="ESBDataMappingProjectCompositeApplication::org.wso2.developerstudio.eclipse.carbon.moduleFactory:ESBDataMappingProjectCompositeApplication::org.wso2.developerstudio.eclipse.carbon.module::1.0"/>
+  </server>
+  <server hostname="localhost" id="org.wso2.micro.integrator.server" id-set="true" name="Micro Integrator Server" runtime-id="org.wso2.micro.integrator.runtime" server-type="org.wso2.developerstudio.eclipse.carbon.server44microei" server-type-id="org.wso2.developerstudio.eclipse.carbon.server44microei" start-timeout="600" stop-timeout="15" timestamp="0">
+    <map carbon.browser="true" carbon.debug="5001" carbon.home="C:\@devThinkers\tools\IntegrationStudio\runtime\microesb" carbon.hotupdate="true" carbon.http="9763" carbon.https="9443" carbon.offset="10" key="generic_server_instance_properties" osgi.console="false" synapse.transport.http="8280" synapse.transport.https="8243"/>
+  </server>
+</servers>

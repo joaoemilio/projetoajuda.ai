@@ -1,0 +1,44 @@
+map_S_rss_S_rss = function(){ 
+var outputrss={};
+
+var count_i_item = 0;
+outputrss =  {};
+outputrss.channel =  {};
+outputrss.channel.title = inputrss.channel.title;
+outputrss.channel.link = inputrss.channel.link;
+outputrss.channel.description = inputrss.channel.description;
+outputrss.channel.image =  {};
+outputrss.channel.image.title = inputrss.channel.image.title;
+outputrss.channel.image.url = inputrss.channel.image.url;
+outputrss.channel.image.link = inputrss.channel.image.link;
+outputrss.channel.item =  [];
+
+for(i_item in inputrss.channel.item){
+outputrss.channel.item[count_i_item] =  {};
+outputrss.channel.item[count_i_item].title = inputrss.channel.item[i_item].title;
+outputrss.channel.item[count_i_item].link = inputrss.channel.item[i_item].link;
+outputrss.channel.item[count_i_item].description = inputrss.channel.item[i_item].description;
+outputrss.channel.item[count_i_item].pubDate = inputrss.channel.item[i_item].pubDate;
+outputrss.channel.item[count_i_item].guid = inputrss.channel.item[i_item].guid;
+outputrss.channel.item[count_i_item].dc_date = inputrss.channel.item[i_item].dc_date;
+
+count_i_item++;
+}
+return outputrss;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

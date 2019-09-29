@@ -1,0 +1,24 @@
+map_S_rss_S_root = function(){ 
+var outputroot={};
+
+var count_i_item = 0;
+outputroot =  [];
+
+for(i_item in inputrss.channel.item){
+outputroot[count_i_item] =  {};
+outputroot[count_i_item].title = inputrss.channel.item[i_item].title;
+outputroot[count_i_item].link = inputrss.channel.item[i_item].link;
+outputroot[count_i_item].pubDate = inputrss.channel.item[i_item].pubDate;
+outputroot[count_i_item].guid = inputrss.channel.item[i_item].guid;
+outputroot[count_i_item].date = inputrss.channel.item[i_item].dc_date;
+
+count_i_item++;
+}
+return outputroot;
+};
+
+
+
+
+
+

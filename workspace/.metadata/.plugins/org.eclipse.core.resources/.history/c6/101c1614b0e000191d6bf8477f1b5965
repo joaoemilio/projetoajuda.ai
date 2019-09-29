@@ -1,0 +1,88 @@
+{
+  "$schema" : "http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#",
+  "attributes" : {
+    "version" : {
+      "id" : "http://wso2jsonschema.org/version",
+      "type" : "number"
+    }
+  },
+  "id" : "http://wso2jsonschema.org",
+  "title" : "rss",
+  "type" : "object",
+  "properties" : {
+    "channel" : {
+      "id" : "http://wso2jsonschema.org/channel",
+      "type" : "object",
+      "properties" : {
+        "title" : {
+          "id" : "http://wso2jsonschema.org/channel/title",
+          "type" : "string"
+        },
+        "link" : {
+          "id" : "http://wso2jsonschema.org/channel/link",
+          "type" : "string"
+        },
+        "description" : {
+          "id" : "http://wso2jsonschema.org/channel/description",
+          "type" : "string"
+        },
+        "image" : {
+          "id" : "http://wso2jsonschema.org/channel/image",
+          "type" : "object",
+          "properties" : {
+            "title" : {
+              "id" : "http://wso2jsonschema.org/channel/image/title",
+              "type" : "string"
+            },
+            "url" : {
+              "id" : "http://wso2jsonschema.org/channel/image/url",
+              "type" : "string"
+            },
+            "link" : {
+              "id" : "http://wso2jsonschema.org/channel/image/link",
+              "type" : "string"
+            }
+          }
+        },
+        "item" : {
+          "id" : "http://wso2jsonschema.org/channel/item",
+          "type" : "array",
+          "items" : [ {
+            "id" : "http://wso2jsonschema.org/channel/item/0",
+            "type" : "object",
+            "properties" : {
+              "title" : {
+                "id" : "http://wso2jsonschema.org/channel/item/0/title",
+                "type" : "string"
+              },
+              "link" : {
+                "id" : "http://wso2jsonschema.org/channel/item/0/link",
+                "type" : "string"
+              },
+              "description" : {
+                "id" : "http://wso2jsonschema.org/channel/item/0/description",
+                "type" : "string"
+              },
+              "pubDate" : {
+                "id" : "http://wso2jsonschema.org/channel/item/0/pubDate",
+                "type" : "string"
+              },
+              "guid" : {
+                "id" : "http://wso2jsonschema.org/channel/item/0/guid",
+                "type" : "string"
+              },
+              "dc:date" : {
+                "id" : "http://wso2jsonschema.org/channel/item/0/dc:date",
+                "type" : "string"
+              }
+            }
+          } ]
+        }
+      }
+    }
+  },
+  "namespaces" : [ {
+    "prefix" : "dc",
+    "url" : "http://purl.org/dc/elements/1.1/"
+  } ]
+}
