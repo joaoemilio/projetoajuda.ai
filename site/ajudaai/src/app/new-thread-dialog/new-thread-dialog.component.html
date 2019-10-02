@@ -1,0 +1,14 @@
+<form #myform = "ngForm" (ngSubmit) = "onSubmit(myform)" class="example-form">
+
+<mat-form-field class="example-full-width">
+    <textarea rows="4" matInput #message maxlength="200" name="mensagem" ngModel placeholder="Mensagem"></textarea>
+    <mat-hint align="start"><strong>Envie uma mensagem para a comunidade do "Ajuda aí".</strong> </mat-hint>
+    <mat-hint align="end">{{message.value.length}} / 200</mat-hint>
+</mat-form-field>
+
+<div mat-dialog-actions align="end">
+        <button id="close-button" mat-mini-fab color="primary" (click)="close()"><i class="material-icons" >close</i></button>
+        <button type="submit" id="save-button" mat-mini-fab color="primary" (click)="sendMessage()"><i class="material-icons" >send</i></button>
+</div>
+
+</form>

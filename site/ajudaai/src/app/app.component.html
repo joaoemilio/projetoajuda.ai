@@ -1,0 +1,87 @@
+<html>
+  <head>
+      <script src="https://kit.fontawesome.com/f29e6f9a5c.js" crossorigin="anonymous"></script>
+      <style>
+
+          .footer {
+              position: fixed;
+              left: 0;
+              bottom: 0;
+              width: 100%;
+              height: 50px;
+              background-color: #FFD700;
+              color: black;
+              text-align: center;
+              word-spacing: 10px;
+              padding: 10px;
+          }
+          
+          .header {
+              position: fixed;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 60px;
+              background-color: #000000;
+              color: #FFD700;
+              text-align: center;
+          }  
+            
+          .conteudo {
+              left: 0;
+              top: 100;
+              width: 100%;
+              height: 100%;
+          }  
+          
+          .topnav {
+            background-color: #FFD700;
+            overflow: hidden;
+          }
+          
+          /* Style the links inside the navigation bar */
+          .topnav a {
+            width: 40px;
+            color: #000000;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+          }
+          
+          /* Change the color of links on hover */
+          .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+          }
+          
+          /* Add a color to the active/current link */
+          .topnav a.active {
+            background-color: #000000;
+            color: #FFD700;
+          }  
+          
+          #content {
+            margin:auto;
+            padding:100px 0;
+          }
+          </style>
+          <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+              
+  </head>
+
+<div class="header">
+    <h2><img src="assets/ajudaai.png" height="60px"/> AJUDA AÍ!</h2>
+</div>    
+
+<div id="content" class="center">
+  <router-outlet></router-outlet>
+</div>
+
+<div class="footer topnav">
+<a routerLink="/"><fa-icon [icon]="faHome" size="2x"></fa-icon></a>
+<a routerLink="/eu"><fa-icon [icon]="faHeart" size="2x"></fa-icon></a>
+<a routerLink="/instagram"><fa-icon [icon]="faInstagram" size="2x"></fa-icon></a>
+<a routerLink="/forum"><fa-icon [icon]="faComment" size="2x"></fa-icon></a>
+</div>
+</html>
