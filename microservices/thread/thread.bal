@@ -19,16 +19,16 @@ http:AuthProvider jwtAuthProvider = {
 };
 listener http:Listener ep = new(9092, config = {
     //authProviders:[jwtAuthProvider],
-    secureSocket: {
-        keyStore: {
-            path: "${ballerina.home}/bre/security/ballerinaKeystore.p12",
-            password: "ballerina"
-        },
-        trustStore: {
-            path: "${ballerina.home}/bre/security/ballerinaTruststore.p12",
-            password: "ballerina"
-        }
-    }
+    //secureSocket: {
+    //    keyStore: {
+     //       path: "${ballerina.home}/bre/security/ballerinaKeystore.p12",
+     //       password: "ballerina"
+     //   },
+     //   trustStore: {
+     //       path: "${ballerina.home}/bre/security/ballerinaTruststore.p12",
+     //       password: "ballerina"
+     //   }
+    //}
 });
 
 @docker:Config {
