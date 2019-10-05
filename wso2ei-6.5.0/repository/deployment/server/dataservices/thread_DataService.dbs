@@ -1,0 +1,77 @@
+<data name="thread_DataService" serviceNamespace="http://ws.wso2.org/dataservice" transports="http https">
+   <config enableOData="false" id="default">
+      <property name="carbon_datasource_name">FORUM</property>
+   </config>
+   <query id="delete_thread_query" useConfig="default">
+      <sql>DELETE FROM thread WHERE id=?</sql>
+      <param name="id" ordinal="1" sqlType="INTEGER"/>
+   </query>
+   <query id="insert_thread_query" useConfig="default">
+      <sql>INSERT INTO thread(descricao,forum_id) VALUES(?,?)</sql>
+      <param name="descricao" ordinal="1" sqlType="STRING"/>
+      <param name="forum_id" ordinal="2" sqlType="INTEGER"/>
+   </query>
+   <query id="select_all_thread_query" useConfig="default">
+      <sql>SELECT id, descricao, forum_id FROM thread</sql>
+      <result element="threadCollection" rowName="thread">
+         <element column="id" name="id" xsdType="xs:integer"/>
+         <element column="descricao" name="descricao" xsdType="xs:string"/>
+         <element column="forum_id" name="forum_id" xsdType="xs:integer"/>
+      </result>
+   </query>
+   <query id="update_thread_query" useConfig="default">
+      <sql>UPDATE thread SET descricao=?,forum_id=? WHERE id=?</sql>
+      <param name="descricao" ordinal="1" sqlType="STRING"/>
+      <param name="forum_id" ordinal="2" sqlType="INTEGER"/>
+      <param name="id" ordinal="3" sqlType="INTEGER"/>
+   </query>
+   <query id="select_with_key_thread_query" useConfig="default">
+      <sql>SELECT id, descricao, forum_id FROM thread WHERE id=?</sql>
+      <result element="threadCollection" rowName="thread">
+         <element column="id" name="id" xsdType="xs:integer"/>
+         <element column="descricao" name="descricao" xsdType="xs:string"/>
+         <element column="forum_id" name="forum_id" xsdType="xs:integer"/>
+      </result>
+      <param name="id" ordinal="1" sqlType="INTEGER"/>
+   </query>
+   <operation name="update_thread_operation">
+      <call-query href="update_thread_query">
+         <with-param name="id" query-param="id"/>
+         <with-param name="forum_id" query-param="forum_id"/>
+         <with-param name="descricao" query-param="descricao"/>
+      </call-query>
+   </operation>
+   <operation name="select_with_key_thread_operation">
+      <call-query href="select_with_key_thread_query">
+         <with-param name="id" query-param="id"/>
+      </call-query>
+   </operation>
+   <operation name="delete_thread_operation">
+      <call-query href="delete_thread_query">
+         <with-param name="id" query-param="id"/>
+      </call-query>
+   </operation>
+   <operation name="select_all_thread_operation">
+      <call-query href="select_all_thread_query"/>
+   </operation>
+   <operation name="insert_thread_operation">
+      <call-query href="insert_thread_query">
+         <with-param name="forum_id" query-param="forum_id"/>
+         <with-param name="descricao" query-param="descricao"/>
+      </call-query>
+   </operation>
+   <resource method="GET" path="/threads">
+      <call-query href="select_all_thread_query"/>
+   </resource>
+   <resource method="GET" path="/thread">
+      <call-query href="select_with_key_thread_query">
+         <with-param name="id" query-param="id"/>
+      </call-query>
+   </resource>
+   <resource method="POST" path="/thread">
+      <call-query href="insert_thread_query">
+         <with-param name="descricao" query-param="descricao"/>
+         <with-param name="forum_id" query-param="forum_id"/>
+      </call-query>
+   </resource>
+</data>

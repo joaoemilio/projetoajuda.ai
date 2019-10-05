@@ -1,6 +1,10 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import {NgForm} from '@angular/forms';
+import { ForumService } from '../forum.service';
+import { Thread } from '../domain/thread';
+import { throwError } from 'rxjs';
+import { retry, catchError } from 'rxjs/operators';
 
 export interface DialogData {
   animal: string;
@@ -15,6 +19,7 @@ export interface DialogData {
 export class NewThreadDialogComponent implements OnInit {
   public mensagem: string;
   constructor(
+    public forumService: ForumService,
     public dialogRef: MatDialogRef<NewThreadDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
   
@@ -23,8 +28,19 @@ export class NewThreadDialogComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
+    let mensagem = form.controls['mensagem'].value;
     console.log('Your form data : ', form.value);
-    console.log( form.controls['mensagem'].value );
+    console.log( mensagem );
+    let thread: Thread = {
+      id : undefined,
+      descricao: undefined,
+      idForum: undefined,
+      user: undefined
+    };
+    this.forumService.addThread(thread).pipe( 
+      retry(1), 
+      catchError( this.errorHandl) 
+    );
     this.dialogRef.close();
 }
 
@@ -38,4 +54,17 @@ export class NewThreadDialogComponent implements OnInit {
     this.dialogRef.close();
   }
 
+// Error handling
+errorHandl(error) {
+  let errorMessage = '';
+  if(error.error instanceof ErrorEvent) {
+    // Get client-side error
+    errorMessage = error.error.message;
+  } else {
+    // Get server-side error
+    errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+  }
+  console.log(errorMessage);
+  return throwError(errorMessage);
+}
 }

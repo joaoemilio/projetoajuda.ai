@@ -1,0 +1,378 @@
+TID: [-1234] [] [2019-10-03 09:34:50,180] ERROR {org.wso2.carbon.dataservices.core.DBInOutMessageReceiver} -  Error in in-out message receiver {org.wso2.carbon.dataservices.core.DBInOutMessageReceiver}
+DS Code: DATABASE_ERROR
+Nested Exception:-
+javax.xml.stream.XMLStreamException: DS Fault Message: Error in 'SQLQuery.processPreNormalQuery': DS Fault Message: Error in opening DBMS connection.
+DS Code: DATABASE_ERROR
+Nested Exception:-
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+DS Code: DATABASE_ERROR
+Source Data Service:-
+Name: message_DataService
+Location: /message_DataService.dbs
+Description: N/A
+Default Namespace: http://ws.wso2.org/dataservice
+Current Request Name: select_all_message_operation
+Current Params: {}
+Nested Exception:-
+DS Fault Message: Error in opening DBMS connection.
+DS Code: DATABASE_ERROR
+Nested Exception:-
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+
+
+	at org.wso2.carbon.dataservices.core.dispatch.SingleDataServiceRequest.processRequest(SingleDataServiceRequest.java:75)
+	at org.wso2.carbon.dataservices.core.dispatch.DataServiceRequest.dispatch(DataServiceRequest.java:359)
+	at org.wso2.carbon.dataservices.core.DataServiceProcessor.dispatch(DataServiceProcessor.java:41)
+	at org.wso2.carbon.dataservices.core.DBInOutMessageReceiver.invokeBusinessLogic(DBInOutMessageReceiver.java:82)
+	at org.apache.axis2.receivers.AbstractInOutSyncMessageReceiver.invokeBusinessLogic(AbstractInOutSyncMessageReceiver.java:42)
+	at org.apache.axis2.receivers.AbstractMessageReceiver.receive(AbstractMessageReceiver.java:110)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:180)
+	at org.apache.synapse.transport.passthru.ServerWorker.processEntityEnclosingRequest(ServerWorker.java:415)
+	at org.apache.synapse.transport.passthru.ServerWorker.run(ServerWorker.java:152)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.xml.stream.XMLStreamException: DS Fault Message: Error in 'SQLQuery.processPreNormalQuery': DS Fault Message: Error in opening DBMS connection.
+DS Code: DATABASE_ERROR
+Nested Exception:-
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+DS Code: DATABASE_ERROR
+Source Data Service:-
+Name: message_DataService
+Location: /message_DataService.dbs
+Description: N/A
+Default Namespace: http://ws.wso2.org/dataservice
+Current Request Name: select_all_message_operation
+Current Params: {}
+Nested Exception:-
+DS Fault Message: Error in opening DBMS connection.
+DS Code: DATABASE_ERROR
+Nested Exception:-
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+
+	at org.wso2.carbon.dataservices.core.engine.DSOMDataSource.execute(DSOMDataSource.java:102)
+	at org.wso2.carbon.dataservices.core.dispatch.SingleDataServiceRequest.processRequest(SingleDataServiceRequest.java:73)
+	... 12 more
+TID: [-1234] [] [2019-10-03 09:34:50,188] ERROR {org.apache.synapse.transport.passthru.ServerWorker} -  Error processing POST request for : /services/message_DataService.SOAP12Endpoint/select_all_message_operation {org.apache.synapse.transport.passthru.ServerWorker}
+org.apache.axis2.AxisFault: DS Code: DATABASE_ERROR
+Nested Exception:-
+javax.xml.stream.XMLStreamException: DS Fault Message: Error in 'SQLQuery.processPreNormalQuery': DS Fault Message: Error in opening DBMS connection.
+DS Code: DATABASE_ERROR
+Nested Exception:-
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+DS Code: DATABASE_ERROR
+Source Data Service:-
+Name: message_DataService
+Location: /message_DataService.dbs
+Description: N/A
+Default Namespace: http://ws.wso2.org/dataservice
+Current Request Name: select_all_message_operation
+Current Params: {}
+Nested Exception:-
+DS Fault Message: Error in opening DBMS connection.
+DS Code: DATABASE_ERROR
+Nested Exception:-
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+
+
+	at org.wso2.carbon.dataservices.core.DBUtils.createAxisFault(DBUtils.java:801)
+	at org.wso2.carbon.dataservices.core.DBInOutMessageReceiver.invokeBusinessLogic(DBInOutMessageReceiver.java:96)
+	at org.apache.axis2.receivers.AbstractInOutSyncMessageReceiver.invokeBusinessLogic(AbstractInOutSyncMessageReceiver.java:42)
+	at org.apache.axis2.receivers.AbstractMessageReceiver.receive(AbstractMessageReceiver.java:110)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:180)
+	at org.apache.synapse.transport.passthru.ServerWorker.processEntityEnclosingRequest(ServerWorker.java:415)
+	at org.apache.synapse.transport.passthru.ServerWorker.run(ServerWorker.java:152)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.xml.stream.XMLStreamException: DS Fault Message: Error in 'SQLQuery.processPreNormalQuery': DS Fault Message: Error in opening DBMS connection.
+DS Code: DATABASE_ERROR
+Nested Exception:-
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+DS Code: DATABASE_ERROR
+Source Data Service:-
+Name: message_DataService
+Location: /message_DataService.dbs
+Description: N/A
+Default Namespace: http://ws.wso2.org/dataservice
+Current Request Name: select_all_message_operation
+Current Params: {}
+Nested Exception:-
+DS Fault Message: Error in opening DBMS connection.
+DS Code: DATABASE_ERROR
+Nested Exception:-
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+
+	at org.wso2.carbon.dataservices.core.engine.DSOMDataSource.execute(DSOMDataSource.java:102)
+	at org.wso2.carbon.dataservices.core.dispatch.SingleDataServiceRequest.processRequest(SingleDataServiceRequest.java:73)
+	at org.wso2.carbon.dataservices.core.dispatch.DataServiceRequest.dispatch(DataServiceRequest.java:359)
+	at org.wso2.carbon.dataservices.core.DataServiceProcessor.dispatch(DataServiceProcessor.java:41)
+	at org.wso2.carbon.dataservices.core.DBInOutMessageReceiver.invokeBusinessLogic(DBInOutMessageReceiver.java:82)
+	... 9 more
+TID: [-1234] [] [2019-10-03 09:36:01,050]  WARN {org.wso2.carbon.server.admin.module.handler.AuthenticationHandler} -  Illegal access attempt at [2019-10-03 09:36:01,0050] from IP address null while trying to authenticate access to service StatisticsAdmin {org.wso2.carbon.server.admin.module.handler.AuthenticationHandler}
+TID: [-1234] [] [2019-10-03 09:36:01,052] ERROR {org.wso2.carbon.statistics.ui.StatisticsAdminClient} -  Cannot get service stats for service message_DataService. Backend server may be unavailable. {org.wso2.carbon.statistics.ui.StatisticsAdminClient}
+org.apache.axis2.AxisFault: The input stream for an incoming message is null.
+	at org.apache.axis2.transport.TransportUtils.createSOAPMessage(TransportUtils.java:93)
+	at org.apache.axis2.transport.TransportUtils.createSOAPMessage(TransportUtils.java:68)
+	at org.apache.axis2.description.OutInAxisOperationClient.handleResponse(OutInAxisOperation.java:352)
+	at org.apache.axis2.description.OutInAxisOperationClient.send(OutInAxisOperation.java:457)
+	at org.apache.axis2.description.OutInAxisOperationClient.executeImpl(OutInAxisOperation.java:228)
+	at org.apache.axis2.client.OperationClient.execute(OperationClient.java:149)
+	at org.wso2.carbon.statistics.stub.StatisticsAdminStub.getServiceStatistics(StatisticsAdminStub.java:5277)
+	at org.wso2.carbon.statistics.ui.StatisticsAdminClient.getServiceStatistics(StatisticsAdminClient.java:77)
+	at org.apache.jsp.statistics.service_005fstats_005fajaxprocessor_jsp._jspService(service_005fstats_005fajaxprocessor_jsp.java:144)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:472)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:395)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:339)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.wso2.carbon.ui.JspServlet.service(JspServlet.java:155)
+	at org.wso2.carbon.ui.TilesJspServlet.service(TilesJspServlet.java:80)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.eclipse.equinox.http.helper.ContextPathServletAdaptor.service(ContextPathServletAdaptor.java:37)
+	at org.eclipse.equinox.http.servlet.internal.ServletRegistration.service(ServletRegistration.java:61)
+	at org.eclipse.equinox.http.servlet.internal.ProxyServlet.processAlias(ProxyServlet.java:128)
+	at org.eclipse.equinox.http.servlet.internal.ProxyServlet.service(ProxyServlet.java:68)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.wso2.carbon.tomcat.ext.servlet.DelegationServlet.service(DelegationServlet.java:68)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.wso2.carbon.ui.filters.cache.URLBasedCachePreventionFilter.doFilter(URLBasedCachePreventionFilter.java:57)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.owasp.csrfguard.CsrfGuardFilter.doFilter(CsrfGuardFilter.java:72)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.wso2.carbon.ui.filters.CSRFPreventionFilter.doFilter(CSRFPreventionFilter.java:88)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.wso2.carbon.ui.filters.CRLFPreventionFilter.doFilter(CRLFPreventionFilter.java:61)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.wso2.carbon.tomcat.ext.filter.CharacterSetFilter.doFilter(CharacterSetFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.filters.HttpHeaderSecurityFilter.doFilter(HttpHeaderSecurityFilter.java:126)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:110)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:494)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:104)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.continueInvocation(CompositeValve.java:99)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonTomcatValve$1.invoke(CarbonTomcatValve.java:47)
+	at org.wso2.carbon.webapp.mgt.TenantLazyLoaderValve.invoke(TenantLazyLoaderValve.java:57)
+	at org.wso2.carbon.tomcat.ext.valves.TomcatValveContainer.invokeValves(TomcatValveContainer.java:47)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.invoke(CompositeValve.java:62)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonStuckThreadDetectionValve.invoke(CarbonStuckThreadDetectionValve.java:159)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:1025)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonContextCreatorValve.invoke(CarbonContextCreatorValve.java:57)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:445)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1137)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1780)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1739)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+TID: [-1234] [] [2019-10-03 09:36:27,540] ERROR {org.apache.axis2.engine.AxisEngine} -  The endpoint reference (EPR) for the Operation not found is /services/message_DataService/ and the WSA Action = null. If this EPR was previously reachable, please contact the server administrator. {org.apache.axis2.engine.AxisEngine}
+org.apache.axis2.AxisFault: The endpoint reference (EPR) for the Operation not found is /services/message_DataService/ and the WSA Action = null. If this EPR was previously reachable, please contact the server administrator.
+	at org.apache.axis2.engine.DispatchPhase.checkPostConditions(DispatchPhase.java:102)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:329)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:261)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:167)
+	at org.apache.synapse.transport.passthru.ServerWorker.processNonEntityEnclosingRESTHandler(ServerWorker.java:338)
+	at org.apache.synapse.transport.passthru.ServerWorker.run(ServerWorker.java:159)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+TID: [-1234] [] [2019-10-03 09:36:27,541] ERROR {org.apache.synapse.transport.passthru.ServerWorker} -  Error processing HEAD request for : /services/message_DataService/ {org.apache.synapse.transport.passthru.ServerWorker}
+org.apache.axis2.AxisFault: The endpoint reference (EPR) for the Operation not found is /services/message_DataService/ and the WSA Action = null. If this EPR was previously reachable, please contact the server administrator.
+	at org.apache.axis2.engine.DispatchPhase.checkPostConditions(DispatchPhase.java:102)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:329)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:261)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:167)
+	at org.apache.synapse.transport.passthru.ServerWorker.processNonEntityEnclosingRESTHandler(ServerWorker.java:338)
+	at org.apache.synapse.transport.passthru.ServerWorker.run(ServerWorker.java:159)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+TID: [-1234] [] [2019-10-03 09:37:28,111] ERROR {org.apache.axis2.engine.AxisEngine} -  The endpoint reference (EPR) for the Operation not found is /services/message_DataService/forums and the WSA Action = null. If this EPR was previously reachable, please contact the server administrator. {org.apache.axis2.engine.AxisEngine}
+org.apache.axis2.AxisFault: The endpoint reference (EPR) for the Operation not found is /services/message_DataService/forums and the WSA Action = null. If this EPR was previously reachable, please contact the server administrator.
+	at org.apache.axis2.engine.DispatchPhase.checkPostConditions(DispatchPhase.java:102)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:329)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:261)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:167)
+	at org.apache.synapse.transport.passthru.ServerWorker.processNonEntityEnclosingRESTHandler(ServerWorker.java:338)
+	at org.apache.synapse.transport.passthru.ServerWorker.run(ServerWorker.java:159)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+TID: [-1234] [] [2019-10-03 09:37:28,113] ERROR {org.apache.synapse.transport.passthru.ServerWorker} -  Error processing GET request for : /services/message_DataService/forums {org.apache.synapse.transport.passthru.ServerWorker}
+org.apache.axis2.AxisFault: The endpoint reference (EPR) for the Operation not found is /services/message_DataService/forums and the WSA Action = null. If this EPR was previously reachable, please contact the server administrator.
+	at org.apache.axis2.engine.DispatchPhase.checkPostConditions(DispatchPhase.java:102)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:329)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:261)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:167)
+	at org.apache.synapse.transport.passthru.ServerWorker.processNonEntityEnclosingRESTHandler(ServerWorker.java:338)
+	at org.apache.synapse.transport.passthru.ServerWorker.run(ServerWorker.java:159)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+TID: [-1234] [] [2019-10-03 09:37:43,149] ERROR {org.apache.axis2.engine.AxisEngine} -  The endpoint reference (EPR) for the Operation not found is /services/message_DataService/forums and the WSA Action = null. If this EPR was previously reachable, please contact the server administrator. {org.apache.axis2.engine.AxisEngine}
+org.apache.axis2.AxisFault: The endpoint reference (EPR) for the Operation not found is /services/message_DataService/forums and the WSA Action = null. If this EPR was previously reachable, please contact the server administrator.
+	at org.apache.axis2.engine.DispatchPhase.checkPostConditions(DispatchPhase.java:102)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:329)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:261)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:167)
+	at org.apache.synapse.transport.passthru.ServerWorker.processNonEntityEnclosingRESTHandler(ServerWorker.java:338)
+	at org.apache.synapse.transport.passthru.ServerWorker.run(ServerWorker.java:159)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+TID: [-1234] [] [2019-10-03 09:37:43,151] ERROR {org.apache.synapse.transport.passthru.ServerWorker} -  Error processing GET request for : /services/message_DataService/forums {org.apache.synapse.transport.passthru.ServerWorker}
+org.apache.axis2.AxisFault: The endpoint reference (EPR) for the Operation not found is /services/message_DataService/forums and the WSA Action = null. If this EPR was previously reachable, please contact the server administrator.
+	at org.apache.axis2.engine.DispatchPhase.checkPostConditions(DispatchPhase.java:102)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:329)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:261)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:167)
+	at org.apache.synapse.transport.passthru.ServerWorker.processNonEntityEnclosingRESTHandler(ServerWorker.java:338)
+	at org.apache.synapse.transport.passthru.ServerWorker.run(ServerWorker.java:159)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+TID: [-1234] [] [2019-10-03 09:38:08,757] ERROR {org.apache.axis2.engine.AxisEngine} -  The endpoint reference (EPR) for the Operation not found is /services/message_DataService/forums and the WSA Action = null. If this EPR was previously reachable, please contact the server administrator. {org.apache.axis2.engine.AxisEngine}
+org.apache.axis2.AxisFault: The endpoint reference (EPR) for the Operation not found is /services/message_DataService/forums and the WSA Action = null. If this EPR was previously reachable, please contact the server administrator.
+	at org.apache.axis2.engine.DispatchPhase.checkPostConditions(DispatchPhase.java:102)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:329)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:261)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:167)
+	at org.apache.synapse.transport.passthru.ServerWorker.processNonEntityEnclosingRESTHandler(ServerWorker.java:338)
+	at org.apache.synapse.transport.passthru.ServerWorker.run(ServerWorker.java:159)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+TID: [-1234] [] [2019-10-03 09:38:08,758] ERROR {org.apache.synapse.transport.passthru.ServerWorker} -  Error processing GET request for : /services/message_DataService/forums {org.apache.synapse.transport.passthru.ServerWorker}
+org.apache.axis2.AxisFault: The endpoint reference (EPR) for the Operation not found is /services/message_DataService/forums and the WSA Action = null. If this EPR was previously reachable, please contact the server administrator.
+	at org.apache.axis2.engine.DispatchPhase.checkPostConditions(DispatchPhase.java:102)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:329)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:261)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:167)
+	at org.apache.synapse.transport.passthru.ServerWorker.processNonEntityEnclosingRESTHandler(ServerWorker.java:338)
+	at org.apache.synapse.transport.passthru.ServerWorker.run(ServerWorker.java:159)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+TID: [-1234] [] [2019-10-03 09:39:01,346] ERROR {org.apache.axis2.engine.AxisEngine} -  The endpoint reference (EPR) for the Operation not found is /services/message_DataService/forums and the WSA Action = null. If this EPR was previously reachable, please contact the server administrator. {org.apache.axis2.engine.AxisEngine}
+org.apache.axis2.AxisFault: The endpoint reference (EPR) for the Operation not found is /services/message_DataService/forums and the WSA Action = null. If this EPR was previously reachable, please contact the server administrator.
+	at org.apache.axis2.engine.DispatchPhase.checkPostConditions(DispatchPhase.java:102)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:329)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:261)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:167)
+	at org.apache.synapse.transport.passthru.ServerWorker.processNonEntityEnclosingRESTHandler(ServerWorker.java:338)
+	at org.apache.synapse.transport.passthru.ServerWorker.run(ServerWorker.java:159)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+TID: [-1234] [] [2019-10-03 09:39:01,349] ERROR {org.apache.synapse.transport.passthru.ServerWorker} -  Error processing GET request for : /services/message_DataService/forums {org.apache.synapse.transport.passthru.ServerWorker}
+org.apache.axis2.AxisFault: The endpoint reference (EPR) for the Operation not found is /services/message_DataService/forums and the WSA Action = null. If this EPR was previously reachable, please contact the server administrator.
+	at org.apache.axis2.engine.DispatchPhase.checkPostConditions(DispatchPhase.java:102)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:329)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:261)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:167)
+	at org.apache.synapse.transport.passthru.ServerWorker.processNonEntityEnclosingRESTHandler(ServerWorker.java:338)
+	at org.apache.synapse.transport.passthru.ServerWorker.run(ServerWorker.java:159)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+TID: [-1234] [] [2019-10-03 09:39:02,075] ERROR {org.apache.axis2.engine.AxisEngine} -  The endpoint reference (EPR) for the Operation not found is /services/message_DataService/forums and the WSA Action = null. If this EPR was previously reachable, please contact the server administrator. {org.apache.axis2.engine.AxisEngine}
+org.apache.axis2.AxisFault: The endpoint reference (EPR) for the Operation not found is /services/message_DataService/forums and the WSA Action = null. If this EPR was previously reachable, please contact the server administrator.
+	at org.apache.axis2.engine.DispatchPhase.checkPostConditions(DispatchPhase.java:102)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:329)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:261)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:167)
+	at org.apache.synapse.transport.passthru.ServerWorker.processNonEntityEnclosingRESTHandler(ServerWorker.java:338)
+	at org.apache.synapse.transport.passthru.ServerWorker.run(ServerWorker.java:159)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+TID: [-1234] [] [2019-10-03 09:39:02,077] ERROR {org.apache.synapse.transport.passthru.ServerWorker} -  Error processing GET request for : /services/message_DataService/forums {org.apache.synapse.transport.passthru.ServerWorker}
+org.apache.axis2.AxisFault: The endpoint reference (EPR) for the Operation not found is /services/message_DataService/forums and the WSA Action = null. If this EPR was previously reachable, please contact the server administrator.
+	at org.apache.axis2.engine.DispatchPhase.checkPostConditions(DispatchPhase.java:102)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:329)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:261)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:167)
+	at org.apache.synapse.transport.passthru.ServerWorker.processNonEntityEnclosingRESTHandler(ServerWorker.java:338)
+	at org.apache.synapse.transport.passthru.ServerWorker.run(ServerWorker.java:159)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+TID: [-1234] [] [2019-10-03 09:39:37,016] ERROR {org.apache.axis2.engine.AxisEngine} -  The endpoint reference (EPR) for the Operation not found is /services/forum_DataService/ and the WSA Action = null. If this EPR was previously reachable, please contact the server administrator. {org.apache.axis2.engine.AxisEngine}
+org.apache.axis2.AxisFault: The endpoint reference (EPR) for the Operation not found is /services/forum_DataService/ and the WSA Action = null. If this EPR was previously reachable, please contact the server administrator.
+	at org.apache.axis2.engine.DispatchPhase.checkPostConditions(DispatchPhase.java:102)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:329)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:261)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:167)
+	at org.apache.synapse.transport.passthru.ServerWorker.processNonEntityEnclosingRESTHandler(ServerWorker.java:338)
+	at org.apache.synapse.transport.passthru.ServerWorker.run(ServerWorker.java:159)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+TID: [-1234] [] [2019-10-03 09:39:37,018] ERROR {org.apache.synapse.transport.passthru.ServerWorker} -  Error processing HEAD request for : /services/forum_DataService/ {org.apache.synapse.transport.passthru.ServerWorker}
+org.apache.axis2.AxisFault: The endpoint reference (EPR) for the Operation not found is /services/forum_DataService/ and the WSA Action = null. If this EPR was previously reachable, please contact the server administrator.
+	at org.apache.axis2.engine.DispatchPhase.checkPostConditions(DispatchPhase.java:102)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:329)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:261)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:167)
+	at org.apache.synapse.transport.passthru.ServerWorker.processNonEntityEnclosingRESTHandler(ServerWorker.java:338)
+	at org.apache.synapse.transport.passthru.ServerWorker.run(ServerWorker.java:159)
+	at org.apache.axis2.transport.base.threads.NativeWorkerPool$1.run(NativeWorkerPool.java:172)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)

@@ -1,0 +1,60 @@
+<data name="forum_DataService" serviceNamespace="http://ws.wso2.org/dataservice" transports="http https">
+   <config enableOData="false" id="default">
+      <property name="carbon_datasource_name">FORUM</property>
+   </config>
+   <query id="update_forum_query" useConfig="default">
+      <sql>UPDATE forum SET nome=? WHERE id=?</sql>
+      <param name="nome" ordinal="1" sqlType="STRING"/>
+      <param name="id" ordinal="2" sqlType="INTEGER"/>
+   </query>
+   <query id="insert_forum_query" useConfig="default">
+      <sql>INSERT INTO forum(nome) VALUES(?)</sql>
+      <param name="nome" ordinal="1" sqlType="STRING"/>
+   </query>
+   <query id="delete_forum_query" useConfig="default">
+      <sql>DELETE FROM forum WHERE id=?</sql>
+      <param name="id" ordinal="1" sqlType="INTEGER"/>
+   </query>
+   <query id="select_all_forum_query" useConfig="default">
+      <sql>SELECT id, nome FROM forum</sql>
+      <result element="forumCollection" rowName="forum">
+         <element column="id" name="id" xsdType="xs:integer"/>
+         <element column="nome" name="nome" xsdType="xs:string"/>
+      </result>
+   </query>
+   <query id="select_with_key_forum_query" useConfig="default">
+      <sql>SELECT id, nome FROM forum WHERE id=?</sql>
+      <result element="forumCollection" rowName="forum">
+         <element column="id" name="id" xsdType="xs:integer"/>
+         <element column="nome" name="nome" xsdType="xs:string"/>
+      </result>
+      <param name="id" ordinal="1" sqlType="INTEGER"/>
+   </query>
+   <operation name="delete_forum_operation">
+      <call-query href="delete_forum_query">
+         <with-param name="id" query-param="id"/>
+      </call-query>
+   </operation>
+   <operation name="select_with_key_forum_operation">
+      <call-query href="select_with_key_forum_query">
+         <with-param name="id" query-param="id"/>
+      </call-query>
+   </operation>
+   <operation name="select_all_forum_operation">
+      <call-query href="select_all_forum_query"/>
+   </operation>
+   <operation name="insert_forum_operation">
+      <call-query href="insert_forum_query">
+         <with-param name="nome" query-param="nome"/>
+      </call-query>
+   </operation>
+   <operation name="update_forum_operation">
+      <call-query href="update_forum_query">
+         <with-param name="nome" query-param="nome"/>
+         <with-param name="id" query-param="id"/>
+      </call-query>
+   </operation>
+   <resource method="GET" path="/forums">
+      <call-query href="select_all_forum_query"/>
+   </resource>
+</data>

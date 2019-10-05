@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { NewThreadDialogComponent } from '../new-thread-dialog/new-thread-dialog.component';
+import { ForumService } from '../forum.service';
 
 export interface DialogData {
   animal: string;
@@ -13,13 +14,18 @@ export interface DialogData {
   styleUrls: ['./forum.component.scss']
 })
 export class ForumComponent implements OnInit {
-  animal: string;
-  name: string;
+
+  forums;
   public mensagem: string;
 
-  constructor(private dialog: MatDialog) { }
+  constructor(private forumService: ForumService, private dialog: MatDialog) { }
 
   ngOnInit() {
+    this.forumService.getThreads().subscribe((data)=>{
+      console.log(data);
+      this.forums = data['threadCollection'].thread;
+      console.log( this.forums);
+    });
   }
 
   openDialog(): void {

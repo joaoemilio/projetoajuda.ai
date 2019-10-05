@@ -1,2 +1,14 @@
+<div *ngFor="let forum of forums">
+    <mat-card class="primary">
+        <mat-card-content>
+            <p> <img mat-card-avatar src="assets/dark1.imageset/dark1@2x.png" /> {{forum.descricao}}</p>  
+            <mat-divider></mat-divider>
+        </mat-card-content>
+        <mat-card-actions>
+        </mat-card-actions>
+    </mat-card>
+  </div>
+
+
 <button mat-fab color="light" id="add-button" matTooltip="Novo Comentário" (click)="openDialog()"><i class="material-icons" >add_comment</i></button>
 

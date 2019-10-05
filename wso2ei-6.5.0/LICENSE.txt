@@ -1,0 +1,130 @@
+This product is a derivative of software originally licensed under Apache
+License 2.0.  The Apache License 2.0 can be downloaded from the following
+locations:
+
+http://www.apache.org/licenses/LICENSE-2.0.html
+http://www.apache.org/licenses/LICENSE-2.0.txt
+
+This product has been substantially changed from the original open source
+distribution by replacing certain portions with code obtained through the WSO2
+Update service (https://wso2.com/updates) and licensed under the WSO2 Update
+End User License Agreement 2.0 (attached below, copy available at
+https://wso2.com/licenses/wso2-update/2.0)  The scope of these changes is
+unique to this distribution.  As such you should assume any file within this
+distribution could be subject to the terms of WSO2 Update EULA 2.0.
+
+The original open source product, as well as a complete list of the licenses
+for all contained libraries, can be obtained from the wso2.com web site.
+
+-----------------------------------------------------------------------------
+
+IMPORTANT!  PLEASE READ THE TERMS AND CONDITIONS OF THIS LICENSE AGREEMENT 
+CAREFULLY BEFORE CONTINUING WITH THIS PROGRAM INSTALL!
+
+In plain English: WSO2 Updates are licensed for use in conjunction with a WSO2 
+Subscription or made available for evaluation during a free trial period.  You 
+may install and use updates provided by WSO2 during these periods; however, 
+when your subscription or trial period terminates you must remove and destroy 
+the Updates.  Please contact WSO2 to obtain or renew your subscription.
+
+WSO2 UPDATE END-USER LICENSE AGREEMENT 2.0
+
+This WSO2 Update End-User License Agreement ("EULA") constitutes a legal 
+agreement between you, the "End User" (either an individual or a single 
+entity) and WSO2 for the WSO2 software updates you download and install (the 
+Updates.)  By installing, copying, or otherwise using this Update you agree to 
+be bound by these terms. If you do not agree to the terms of this EULA, do not 
+install or use the Update.  The Update is protected by copyright laws and 
+international copyright treaties, as well as other intellectual property laws 
+and treaties. The Update is licensed, not sold. 
+
+1. Definitions
+
+(a) A "Product" is a software package made available by WSO2 under the Apache 
+    License 2.0 or other license and subject to the terms thereof.
+(b) A "Licensed Product" is a Product that is covered by an authorized 
+    commercial agreement between the End User and WSO2, or between the End 
+    User and a third party (OEM) that has an authorized commercial agreement 
+    with WSO2.
+(c) "Term" means the Term as defined in a license agreement for a Licensed 
+    Product, or the duration of any trial period extended to the End User.
+(d) An "Update" is a software component made available by WSO2 that augments 
+    the capability or addresses an issue with a Product.
+
+2. Grant of License 
+
+Subject to the terms and conditions contained herein and any applicable 
+Subscription Agreement, including the usage limits described therein, WSO2 
+grants the End User a non-exclusive, non-transferrable, renewable license to 
+use the Update as follows: 
+
+(a) Installation and Use.  WSO2 grants you the right to install and use copies 
+    of the Update in a Licensed Product during the Term.  You shall not exceed 
+    the number of licenses, tiers, nodes, or other use restrictions or 
+    authorizations agreed to and paid for in the commercial agreement.
+(b) Backup Copies. You may make copies of the Update as may be necessary for 
+    backup and archival purposes. 
+
+3. Other Limitations 
+
+(a) Maintenance of Copyright Notices.  You shall not remove or alter any 
+    copyright or license notices that appear in or on the Update.
+(b) Modification.  You shall not modify, alter, decompile, decrypt, 
+    disassemble, translate, or reverse engineer the Update.
+(c) Distribution.  You shall not distribute copies of the Update to third 
+    parties. 
+(d) Rental.  You shall not rent, lease, or lend the Update, including renting, 
+    leasing, or lending a Product that includes the Update.
+(e) SaaS.  You shall not make the Update or Product that includes the Update 
+    available as commercial Software-as-a-Service.
+(f) Compliance with Applicable Laws.  You shall comply with all applicable laws
+    regarding use of the Update. 
+
+4. Termination 
+
+These Terms, including the Software License, shall expire at the end of the 
+Term, unless Licensee and WSO2 agree to renew such License.  Without prejudice
+to any other rights, WSO2 may terminate this EULA if you fail to comply with
+the terms and conditions of this EULA.
+
+Upon expiration or termination of these Terms, you shall uninstall and destroy 
+all copies of the Update in your possession.  Termination or expiration of this
+EULA shall not affect End Users' rights to use any Product in accordance with 
+the terms and conditions of the applicable EULA, or to receive services in 
+accordance with a support agreement, or other agreement as may be applicable.
+
+5. Copyright 
+
+All tight, title and interest, including but not limited to intellectual 
+property rights such as copyrights, in and to the Update and any copies 
+thereof, are owned by WSO2 or its suppliers. All right, title and interest, 
+including but not limited to intellectual property rights such as copyrights, 
+in and to the content which may be accessed through use of the Update is the 
+property of the respective content owner and may be protected by applicable 
+copyright or other intellectual property laws and treaties. This EULA grants 
+you no rights to use such content. All rights not expressly granted are 
+reserved by WSO2. 
+
+6. No Warranties 
+
+UNLESS EXPRESSLY PROVIDED HEREIN TO THE CONTRARY, AND TO THE MAXIMUM EXTENT 
+PERMITTED BY APPLICABLE LAW, AND ANY AND ALL SERVICES AND SOFTWARE INCLUDING 
+PATCHES AND SERVICE PACKS PROVIDED BY WSO2 HEREUNDER ARE PROVIDED "AS IS" 
+WITHOUT ANY WARRANTIES OR CONDITIONS OF ANY KIND, INCLUDING IMPLIED WARRANTIES 
+AND CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND 
+NON-INFRINGEMENT. NO WARRANTY, WRITTEN OR ORAL, IS EXPRESSED OR IMPLIED BY WSO2
+OR MAY BE INFERRED FROM A COURSE OF DEALING OR USAGE OF TRADE. NOTHING STATED 
+IN THIS AGREEMENT WILL IMPLY THAT THE OPERATION OF ANY SOFTWARE WILL BE 
+UNINTERRUPTED OR ERROR FREE, OR THAT ERRORS WILL BE CORRECTED.
+
+7. Limitation of Liability 
+
+IN NO EVENT WILL WSO2 BE LIABLE FOR ANY INCIDENTAL INDIRECT, SPECIAL, OR 
+CONSEQUENTIAL COSTS OR DAMAGES INCLUDING, WITHOUT LIMITATION, DOWNTIME COSTS; 
+LOST BUSINESS, REVENUES, OR PROFITS; FAILURE TO REALIZE EXPECTED SAVINGS; LOSS 
+OF OR DAMAGE TO DATA; OR SOFTWARE RESTORATION, REGARDLESS OF WHETHER ANY OF THE
+FOREGOING ARE FORESEEABLE, AND REGARDLESS OF WHETHER WSO2 HAS BEEN NOTIFIED OF 
+THE POSSIBILITY OF ANY OF THE FOREGOING. THESE LIMITATIONS WILL APPLY 
+REGARDLESS OF THE BASIS OF LIABILITY; INCLUDING NEGLIGENCE; MISREPRESENTATION;
+BREACH; LIBEL; INFRINGEMENT OF PUBLICITY, PRIVACY, OR INTELLECTUAL PROPERTY 
+RIGHTS; OR ANY OTHER CONTRACT OR TORT CLAIM.

@@ -9,6 +9,7 @@ import { EuComponent } from './eu/eu.component';
 import { ForumComponent } from './forum/forum.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import {
   MatAutocompleteModule,
@@ -61,6 +62,7 @@ import { NewThreadDialogComponent } from './new-thread-dialog/new-thread-dialog.
     NewThreadDialogComponent
   ],
   imports: [
+    HttpClientModule,
     FormsModule,
     BrowserModule,
     BrowserAnimationsModule,

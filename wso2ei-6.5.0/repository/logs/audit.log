@@ -1,0 +1,4 @@
+[2019-10-03 09:34:38,322]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-10-03 09:34:38,320-0500] 
+[2019-10-03 09:36:01,052] ERROR -  Illegal access attempt at [2019-10-03 09:36:01,0050] from IP address null while trying to authenticate access to service StatisticsAdmin 
+[2019-10-03 09:38:20,145]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-10-03 09:38:20,145-0500] 
+[2019-10-03 10:30:33,699]  INFO -  'admin@carbon.super [-1234]' logged in at [2019-10-03 10:30:33,698-0500] 
