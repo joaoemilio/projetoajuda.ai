@@ -1,1 +1,0 @@
-drop table ACT_BPS_SUBSTITUTES;
