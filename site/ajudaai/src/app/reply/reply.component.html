@@ -1,0 +1,23 @@
+<div id="thread" class="center">
+
+    <div class="header2"> 
+        <h5>{{thread.descricao}}</h5>  
+    </div>
+    <br/>
+
+    <div class="content2">
+        <div *ngFor="let message of messages" class="replies">
+
+            <mat-card class="matCardReply">
+                    <mat-card-content>
+                        <b>Anonimo 1 </b> {{message.message}}
+                    </mat-card-content>
+                </mat-card>
+            <br/>
+
+        </div>
+    </div>
+
+    <button mat-fab color="primary" id="add-button" matTooltip="Novo Comentário" (click)="openDialog()"><i class="material-icons" >add_comment</i></button>
+
+</div>

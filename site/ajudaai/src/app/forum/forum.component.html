@@ -1,14 +1,27 @@
-<div *ngFor="let forum of forums">
-    <mat-card class="primary">
-        <mat-card-content>
-            <p> <img mat-card-avatar src="assets/dark1.imageset/dark1@2x.png" /> {{forum.descricao}}</p>  
-            <mat-divider></mat-divider>
-        </mat-card-content>
-        <mat-card-actions>
-        </mat-card-actions>
-    </mat-card>
-  </div>
+<div id="forum" class="center">
 
+    <div *ngFor="let forum of forums" >
+        <mat-card class="primary">
+            <mat-card-content>
+                <h5>{{forum.descricao}}</h5>  
+                <mat-divider></mat-divider>
+            </mat-card-content>
+            <mat-card-actions>
+                <img mat-card-avatar src="assets/dark1.imageset/dark1.png" /> Joao Emilio - 1 comentário
+                <div id="botoes">
+                    <button mat-icon-button aria-label="fazer um comentário">
+                        <a routerLink="/forum/{{forum.id}}/reply"><mat-icon>comment</mat-icon></a>
+                    </button>
+                    <button mat-icon-button aria-label="Enviar um coração">
+                        <mat-icon>favorite</mat-icon>
+                    </button>        
+                </div>          
+            </mat-card-actions>
+        </mat-card>
+        <br/>
 
-<button mat-fab color="light" id="add-button" matTooltip="Novo Comentário" (click)="openDialog()"><i class="material-icons" >add_comment</i></button>
+    </div>
 
+    <button mat-fab color="primary" id="add-button" matTooltip="Novo Comentário" (click)="openDialog()"><i class="material-icons" >add_comment</i></button>
+
+</div>

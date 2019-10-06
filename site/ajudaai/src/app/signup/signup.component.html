@@ -1,0 +1,34 @@
+<div class="example-container">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                Registrar
+            </mat-card-title>
+            <mat-card-subtitle>
+                    Use sua conta do facebook e escolha um apelido. A participação é anônima, porém precisamos garantir os usuários da plataforma utilizem para auxiliar uns aos outros, evitando a qualquer custo algo que possa prejudicar ou ferir alguém. O apelido será utilizado para identificar seus comentários no fórum.
+                </mat-card-subtitle>
+            </mat-card-header>
+        <mat-card-content>
+
+            <form #myform = "ngForm" (ngSubmit) = "onSubmit(myform)" class="example-form">
+                <label>Escolha seu Apelido</label><br/>
+                <mat-form-field>
+                    <input matInput name="apelido" placeholder="Digite seu apelido" type="text" [(ngModel)]="apelido">
+                </mat-form-field>
+
+                <br/>
+                <label>Escolha seu Avatar</label>
+                <br/>
+                <mat-grid-list cols="7" rowHeight="1:1">
+                    <mat-grid-tile *ngFor="let avatar of avatars" >
+                        <a (click)="chooseAvatar( $event, avatar.id )"><img id="{{avatar.id}}" mat-card-avatar src="{{avatar.url}}" /></a>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </form>
+
+        </mat-card-content>
+        <mat-card-actions>
+            <button class="loginBtn loginBtn--facebook" (click)="registrar()">Registrar com Facebook</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

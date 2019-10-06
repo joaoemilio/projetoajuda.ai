@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { faCoffee, faHome, faHeart, faComment } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { OAuthService } from 'angular-oauth2-oidc';
+import { JwksValidationHandler } from 'angular-oauth2-oidc';
+import { authConfig } from './auth.config';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -14,4 +18,8 @@ export class AppComponent {
   faHeart = faHeart;
   faInstagram = faInstagram;
   faComment = faComment;
+  constructor( private oauthService: OAuthService) {
+      //this.configureWithNewConfigApi();
+  }
+
 }

@@ -5,11 +5,8 @@ import { ForumService } from '../forum.service';
 import { Thread } from '../domain/thread';
 import { throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
+import { OAuthService } from 'angular-oauth2-oidc';
 
-export interface DialogData {
-  animal: string;
-  name: string;
-}
 
 @Component({
   selector: 'app-new-thread-dialog',
@@ -20,38 +17,37 @@ export class NewThreadDialogComponent implements OnInit {
   public mensagem: string;
   constructor(
     public forumService: ForumService,
-    public dialogRef: MatDialogRef<NewThreadDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+    public oauthService: OAuthService,
+    public dialogRef: MatDialogRef<NewThreadDialogComponent>) {}
   
   confirmSelection() {
 
   }
 
-  onSubmit(form: NgForm) {
-    let mensagem = form.controls['mensagem'].value;
-    console.log('Your form data : ', form.value);
-    console.log( mensagem );
+  onSubmit() {
+  }
+
+  ngOnInit() {
+  }
+
+  public sendMessage() {
     let thread: Thread = {
       id : undefined,
       descricao: undefined,
       idForum: undefined,
       user: undefined
     };
-    this.forumService.addThread(thread).pipe( 
-      retry(1), 
-      catchError( this.errorHandl) 
-    );
-    this.dialogRef.close();
-}
 
-  ngOnInit() {
-  }
+    thread.descricao = this.mensagem;
 
-  public sendMessage() {
+    this.forumService.addThread(thread).subscribe((data)=>{
+      console.log(data);
+    });
+    this.dialogRef.close('sent');
   }
 
   public close() {
-    this.dialogRef.close();
+    this.dialogRef.close('close');
   }
 
 // Error handling

@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Thread } from './domain/thread';
+import { Message } from './domain/message';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ForumService {
 
+
   FORUM_API_ENDPOINT="https://gateway.wso2training.com/forum/1.0.0/forums";
-  THREAD_API_ENDPOINT="https://gateway.wso2training.com/thread";
-  API_ACCESS_TOKEN="b825e78d-921b-38a6-b652-d56db1a50c26";
+  THREAD_API_ENDPOINT="https://gateway.wso2training.com/thread/1.0.0";
+  API_ACCESS_TOKEN="b9b3ef64-7819-3652-8cdd-633621eb9db9";
 
   // Http Headers
   httpOptions = {
@@ -37,4 +39,20 @@ export class ForumService {
     console.log ('url ' + url );
     return this.httpClient.post<Thread>(url, thread, this.httpOptions);
   }
+
+  addMessage(message: Message) {
+    console.log( 'addMessage');
+    let url = `${this.THREAD_API_ENDPOINT}/message`;
+    console.log ('url ' + url );
+    return this.httpClient.post<Message>(url, message, this.httpOptions);
+  }
+
+  public getThread( threadId: string ){
+    return this.httpClient.get(`${this.THREAD_API_ENDPOINT}/thread/${threadId}`, this.httpOptions);
+  }
+
+  public getThreadMessages( threadId: string ){
+    return this.httpClient.get(`${this.THREAD_API_ENDPOINT}/thread/${threadId}/messages`, this.httpOptions);
+  }
+
 }

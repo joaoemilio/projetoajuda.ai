@@ -10,6 +10,7 @@ import { ForumComponent } from './forum/forum.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { OAuthModule } from 'angular-oauth2-oidc';
 
 import {
   MatAutocompleteModule,
@@ -50,7 +51,11 @@ import {
   MatToolbarModule,
   MatTooltipModule,
 } from '@angular/material';
-import { NewThreadDialogComponent } from './new-thread-dialog/new-thread-dialog.component'; 
+import { NewThreadDialogComponent } from './new-thread-dialog/new-thread-dialog.component';
+import { ReplyComponent } from './reply/reply.component';
+import { NewReplyDialogComponent } from './new-reply-dialog/new-reply-dialog.component';
+import { SignupComponent } from './signup/signup.component';
+import { AlertDialogComponent } from './alert-dialog/alert-dialog.component'; 
 
 @NgModule({
   declarations: [
@@ -59,9 +64,14 @@ import { NewThreadDialogComponent } from './new-thread-dialog/new-thread-dialog.
     HomeComponent,
     EuComponent,
     ForumComponent,
-    NewThreadDialogComponent
+    NewThreadDialogComponent,
+    ReplyComponent,
+    NewReplyDialogComponent,
+    SignupComponent,
+    AlertDialogComponent
   ],
   imports: [
+    OAuthModule.forRoot(),
     HttpClientModule,
     FormsModule,
     BrowserModule,
@@ -107,7 +117,7 @@ import { NewThreadDialogComponent } from './new-thread-dialog/new-thread-dialog.
     MatTooltipModule
   ],
   providers: [],
-  entryComponents: [ NewThreadDialogComponent ],
+  entryComponents: [ NewThreadDialogComponent, NewReplyDialogComponent, AlertDialogComponent ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -23,7 +23,7 @@ export class ForumComponent implements OnInit {
   ngOnInit() {
     this.forumService.getThreads().subscribe((data)=>{
       console.log(data);
-      this.forums = data['threadCollection'].thread;
+      this.forums = data;
       console.log( this.forums);
     });
   }

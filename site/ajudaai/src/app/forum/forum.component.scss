@@ -1,10 +1,37 @@
-.mainDiv{
-    position: relative;
-  }
+.center {
+  justify-content: center;
+  position: relative;
+  margin: auto;
+}
+
+
   #add-button{
-  
-    right: 20px;
-    bottom: 60px;
-    left: auto;
-    position: absolute;
+    right: 20px !important;
+    bottom: 60px !important;
+    left: auto !important;
+    position: fixed !important;
+    top: auto ;
   }
+
+  #botoes{
+      float: right;
+  }
+
+  @media (max-width: 479px) {
+    #forum {
+        font-size: 13px;
+        width: 100%;
+      }
+  }
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 800px) {
+  #forum {
+    font-size: 13px;
+    width: 60%;
+    padding: 100px;
+    justify-content: center;
+    align-content: center;
+  }  
+}
