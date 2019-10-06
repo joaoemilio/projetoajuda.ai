@@ -102,11 +102,10 @@ export class SignupComponent implements OnInit {
     }
     let user: User = {
       id: undefined,
-      uuid: undefined,
       email: undefined,
       avatar: this.avatar.id,
       photo: this.avatar.url,
-      nome: this.apelido
+      apelido: this.apelido
     }
     localStorage.setItem( "user-ajudaai", JSON.stringify(user));
     this.oauthService.configure(authConfig);

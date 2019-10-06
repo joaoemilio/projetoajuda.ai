@@ -4,5 +4,5 @@ export interface Thread {
     id: number;
     descricao: string;
     idForum: number;
-    user: User;
+    userId: string;
   }

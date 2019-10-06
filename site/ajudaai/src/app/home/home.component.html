@@ -1,22 +1,40 @@
+<div [hidden]="user != null">
+    <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            Já Tenho Usuário
+          </mat-card-title>
+          <mat-card-subtitle>Caso já esteja cadastrado, basta fazer login</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <button class="loginBtn loginBtn--facebook" (click)="login()">Entrar com Facebook</button>
+          </mat-card-content>
+      </mat-card>
+      <br/>
 
-<a routerLink="/signup">Registrar-se</a>
+      <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+              Cadastre-se
+            </mat-card-title>
+            <mat-card-subtitle>Caso ainda não tenha uma conta cadastrada, clique no botão abaixo</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+              <a routerLink="/signup"><button class="loginBtn loginBtn--facebook">Criar uma conta com Facebook</button></a>
+          </mat-card-content>
+        </mat-card>
 
-<p>
-    home works!
-  </p>
-  <p>
-      home works! 2
-    </p>
-    <p>
-        home works! 3
-      </p>
-      <p>
-          home works! 4
-        </p>
-        <p>
-            home works! 5
-          </p>
-          <p>
-              home works! 6
-            </p>
-                                          
+      </div>             
+<div [hidden]="user == null">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        Bem Vindo
+      </mat-card-title>
+      <mat-card-subtitle>Seja bem-vindo(a) ao projeto Ajuda Aí!</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <img mat-card-avatar src="assets/dark{{user.avatar}}.imageset/dark{{user.avatar}}.png" />{{user.apelido}}
+    </mat-card-content>
+  </mat-card>
+</div>

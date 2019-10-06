@@ -7,7 +7,7 @@
                 <mat-divider></mat-divider>
             </mat-card-content>
             <mat-card-actions>
-                <img mat-card-avatar src="assets/dark1.imageset/dark1.png" /> Joao Emilio - 1 comentário
+                <img mat-card-avatar src="assets/dark{{forum.avatar}}.imageset/dark{{forum.avatar}}.png" />{{forum.apelido}}
                 <div id="botoes">
                     <button mat-icon-button aria-label="fazer um comentário">
                         <a routerLink="/forum/{{forum.id}}/reply"><mat-icon>comment</mat-icon></a>

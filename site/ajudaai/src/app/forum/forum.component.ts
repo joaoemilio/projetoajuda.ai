@@ -2,6 +2,8 @@ import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { NewThreadDialogComponent } from '../new-thread-dialog/new-thread-dialog.component';
 import { ForumService } from '../forum.service';
+import { UserService } from '../user.service';
+import { User } from '../domain/user';
 
 export interface DialogData {
   animal: string;
@@ -18,13 +20,23 @@ export class ForumComponent implements OnInit {
   forums;
   public mensagem: string;
 
-  constructor(private forumService: ForumService, private dialog: MatDialog) { }
+  constructor(
+    private forumService: ForumService, 
+    private userService: UserService, 
+    private dialog: MatDialog) { }
 
   ngOnInit() {
     this.forumService.getThreads().subscribe((data)=>{
-      console.log(data);
       this.forums = data;
-      console.log( this.forums);
+      this.forums.forEach(element => {
+        console.log( element.id );
+        this.userService.getUser( element.userId ).subscribe( (data) => {
+          let user: any = data;
+          element.avatar = user.avatar;
+          element.apelido = user.apelido;
+          console.log( element.avatar + ' ' + element.apelido );
+        });
+      });
     });
   }
 

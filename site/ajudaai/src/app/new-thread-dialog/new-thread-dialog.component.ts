@@ -35,10 +35,13 @@ export class NewThreadDialogComponent implements OnInit {
       id : undefined,
       descricao: undefined,
       idForum: undefined,
-      user: undefined
+      userId: undefined
     };
 
+    let user = JSON.parse(localStorage.getItem( "user"));
+
     thread.descricao = this.mensagem;
+    thread.userId = user.id;
 
     this.forumService.addThread(thread).subscribe((data)=>{
       console.log(data);
