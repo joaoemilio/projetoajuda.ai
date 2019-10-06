@@ -3,6 +3,7 @@ import ballerina/io;
 import ballerina/http;
 import ballerina/log;
 import ballerinax/docker;
+import ballerina/system;
 
 
 http:AuthProvider jwtAuthProvider = {
@@ -76,6 +77,38 @@ service threadService on ep {
 
     @http:ResourceConfig {
         methods: ["GET"],
+        path: "/thread/{threadId}/messages",
+        authConfig: {
+            scopes: ["default"]
+        }
+    }
+    resource function getThreadMessages(http:Caller caller, http:Request req, string threadId) {
+        mongodb:Client conn = new({
+            host: "localhost",
+            dbName: "testballerina",
+            username: "",
+            password: "",
+            options: { sslEnabled: false, serverSelectionTimeout: 500 }
+        });
+
+        io:println( "threadid: " + threadId );
+
+        json queryString = { "threadId": threadId };
+        io:println("queryString " + io:sprintf("%s", queryString) );
+
+        json|error ret = conn->find("messages", queryString );
+        io:println( ret );
+
+        conn.stop();
+
+        error? result = caller->respond( io:sprintf("%s", ret ) );
+        if (result is error) {
+            log:printError("Error in responding to caller", err = result);
+        }
+    }
+
+    @http:ResourceConfig {
+        methods: ["GET"],
         path: "/thread/{threadId}",
         authConfig: {
             scopes: ["default"]
@@ -92,10 +125,10 @@ service threadService on ep {
 
         io:println( "threadid: " + threadId );
 
-        json queryString = { "threadId": threadId };
+        json queryString = { "id": threadId };
         io:println("queryString " + io:sprintf("%s", queryString) );
 
-        json|error ret = conn->find("messages", queryString );
+        json|error ret = conn->findOne("threads", queryString );
         io:println( ret );
 
         conn.stop();
@@ -127,6 +160,7 @@ service threadService on ep {
         json response = {};
         if( payload is json ) {
             json doc = payload;
+            doc.id = system:uuid();
             var ret = conn->insert("threads", doc );
             if ret is json {
                 response = ret;

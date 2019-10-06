@@ -396,3 +396,4 @@ Caused by: javax.net.ssl.SSLException: Received fatal alert: certificate_unknown
 [2019-10-05 20:49:02,077] ERROR {org.ballerinalang.net.http.HttpUtil} - {ballerina}KeyNotFound:cannot find key 'id'  
 [2019-10-05 20:50:08,964] ERROR {org.ballerinalang.net.http.HttpUtil} - {ballerina}KeyNotFound:cannot find key 'id'  
 [2019-10-05 21:02:35,438] ERROR {org.ballerinalang.net.http.HttpUtil} - input value 5d98e25b9f5a4f34b73a7183 cannot be cast to integer  
+[2019-10-05 21:37:42,072] ERROR {org.ballerinalang.net.http.HttpUtil} - org.ballerinalang.model.values.BString cannot be cast to org.ballerinalang.model.values.BMap  
