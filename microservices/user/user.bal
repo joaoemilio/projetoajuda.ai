@@ -17,7 +17,7 @@ http:AuthProvider jwtAuthProvider = {
         }
     }
 };
-listener http:Listener ep = new(9092, config = {
+listener http:Listener ep = new(9093, config = {
     //authProviders:[jwtAuthProvider],
     //secureSocket: {
     //    keyStore: {
