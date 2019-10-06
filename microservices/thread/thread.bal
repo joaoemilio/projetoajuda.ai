@@ -75,6 +75,38 @@ service threadService on ep {
     }
 
     @http:ResourceConfig {
+        methods: ["GET"],
+        path: "/thread/{threadId}",
+        authConfig: {
+            scopes: ["default"]
+        }
+    }
+    resource function getThread(http:Caller caller, http:Request req, string threadId) {
+        mongodb:Client conn = new({
+            host: "localhost",
+            dbName: "testballerina",
+            username: "",
+            password: "",
+            options: { sslEnabled: false, serverSelectionTimeout: 500 }
+        });
+
+        io:println( "threadid: " + threadId );
+
+        json queryString = { "threadId": threadId };
+        io:println("queryString " + io:sprintf("%s", queryString) );
+
+        json|error ret = conn->find("messages", queryString );
+        io:println( ret );
+
+        conn.stop();
+
+        error? result = caller->respond( io:sprintf("%s", ret ) );
+        if (result is error) {
+            log:printError("Error in responding to caller", err = result);
+        }
+    }
+
+    @http:ResourceConfig {
         methods: ["POST"],
         path: "/thread",
         authConfig: {
@@ -110,7 +142,73 @@ service threadService on ep {
         if (result is error) {
             log:printError("Error in responding to caller", err = result);
         }
-    }    
+    }   
+
+    @http:ResourceConfig {
+        methods: ["POST"],
+        path: "/message",
+        authConfig: {
+            scopes: ["default"]
+        }
+    }
+    resource function insertMessage(http:Caller caller, http:Request req) {
+        mongodb:Client conn = new({
+            host: "localhost",
+            dbName: "testballerina",
+            username: "",
+            password: "",
+            options: { sslEnabled: false, serverSelectionTimeout: 500 }
+        });
+
+        json|error payload = req.getJsonPayload();
+        io:println("%s", payload);
+        json response = {};
+        if( payload is json ) {
+            json doc = payload;
+            var ret = conn->insert("messages", doc );
+            if ret is json {
+                response = ret;
+            }
+            handleInsert(ret, "Insert to messages");
+        } else {
+            io:println("payload is not json");
+        }
+
+        conn.stop();
+
+        error? result = caller->respond( io:sprintf("%s", response ) );
+        if (result is error) {
+            log:printError("Error in responding to caller", err = result);
+        }
+    }  
+
+    @http:ResourceConfig {
+        methods: ["GET"],
+        path: "/messages",
+        authConfig: {
+            scopes: ["default"]
+        }
+    }
+    resource function getMessages(http:Caller caller, http:Request req) {
+        mongodb:Client conn = new({
+            host: "localhost",
+            dbName: "testballerina",
+            username: "",
+            password: "",
+            options: { sslEnabled: false, serverSelectionTimeout: 500 }
+        });
+
+        json|error ret = conn->find("messages", () );
+        io:println( ret );
+
+        conn.stop();
+
+        error? result = caller->respond( io:sprintf("%s", ret ) );
+        if (result is error) {
+            log:printError("Error in responding to caller", err = result);
+        }
+    }
+
 }
 
 function handleInsert(()|error returned, string message) {

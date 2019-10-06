@@ -390,3 +390,9 @@ Caused by: javax.net.ssl.SSLException: Received fatal alert: certificate_unknown
 	... 18 more
  
 [2019-10-05 15:18:30,830] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Idle timeout triggered before initiating inbound request  
+[2019-10-05 20:46:35,668] ERROR {org.ballerinalang.net.http.HttpUtil} - {ballerina}KeyNotFound:cannot find key 'id'  
+[2019-10-05 20:48:34,367] WARN  {org.wso2.transport.http.netty.contractimpl.listener.states.ReceivingHeaders} - text is empty (possibly HTTP/0.9)  
+[2019-10-05 20:48:34,373] WARN  {org.wso2.transport.http.netty.contractimpl.common.states.StateUtil} - Remote client closed the connection while reading inbound request headers  
+[2019-10-05 20:49:02,077] ERROR {org.ballerinalang.net.http.HttpUtil} - {ballerina}KeyNotFound:cannot find key 'id'  
+[2019-10-05 20:50:08,964] ERROR {org.ballerinalang.net.http.HttpUtil} - {ballerina}KeyNotFound:cannot find key 'id'  
+[2019-10-05 21:02:35,438] ERROR {org.ballerinalang.net.http.HttpUtil} - input value 5d98e25b9f5a4f34b73a7183 cannot be cast to integer  
