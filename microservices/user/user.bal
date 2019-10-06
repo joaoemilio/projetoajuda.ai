@@ -144,10 +144,22 @@ service userService on ep {
 
         conn.stop();
 
-        error? result = caller->respond( io:sprintf("%s", ret ) );
-        if (result is error) {
-            log:printError("Error in responding to caller", err = result);
-        }
+        if ( ret is json ) {
+            io:println( "email " + io:sprintf("%s",ret.email) );
+            if( ret.email == null ) {
+                io:println("email nao encontrado");
+                http:Response response = new;
+                response.statusCode = 404;
+                response.setPayload("Usuario nao encontrado");
+                var responseToCaller = caller->respond(response);
+            } else {
+                error? result = caller->respond( io:sprintf("%s", ret ) );
+                if (result is error) {
+                    log:printError("Error in responding to caller", err = result);
+                }
+            }
+        } 
+
     }
 
     @http:ResourceConfig {
