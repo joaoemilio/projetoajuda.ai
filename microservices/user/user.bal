@@ -117,6 +117,41 @@ service userService on ep {
 
     @http:ResourceConfig {
         methods: ["GET"],
+        path: "/user",
+        authConfig: {
+            scopes: ["default"]
+        }
+    }
+    resource function getUserByEmail(http:Caller caller, http:Request req) {
+        mongodb:Client conn = new({
+            host: "localhost",
+            dbName: "testballerina",
+            username: "",
+            password: "",
+            options: { sslEnabled: false, serverSelectionTimeout: 500 }
+        });
+
+        var params = req.getQueryParams();
+        var email = <string>params.email;
+
+        io:println( "email: " + email );
+
+        json queryString = { "email": email };
+        io:println("queryString " + io:sprintf("%s", queryString) );
+
+        json|error ret = conn->findOne("users", queryString );
+        io:println( ret );
+
+        conn.stop();
+
+        error? result = caller->respond( io:sprintf("%s", ret ) );
+        if (result is error) {
+            log:printError("Error in responding to caller", err = result);
+        }
+    }
+
+    @http:ResourceConfig {
+        methods: ["GET"],
         path: "/users",
         authConfig: {
             scopes: ["default"]
